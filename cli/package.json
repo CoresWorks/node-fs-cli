@@ -9,9 +9,17 @@
 		"build": "tsc",
 		"dev": "tsc --watch"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": ["node", "fs", "cli"],
+  "author": {
+    "name": "coresyt",
+    "email": "coresyt2011@gmail.com",
+    "url": "https://coresyt.vercel.app"
+  },
+  "repository": {
+    "url": "git+https://github.com/CoresWorks/node-fs-cli.git",
+    "type": "git"
+  },
+	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "20.14.10",
 		"typescript": "5.5.3"
@@ -21,5 +29,8 @@
 		"commander": "12.1.0",
 		"fs": "0.0.1-security",
 		"ora": "8.0.1"
-	}
+	},
+  "engines": {
+    "node": "v20"
+  }
 }
