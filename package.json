@@ -1,14 +1,14 @@
 {
-  "name": "fs",
+	"name": "fs",
 	"private": true,
 	"scripts": {
 		"lint": "biome lint . && biome format . --write",
 		"lintf": "biome lint . --fix && biome format . --write",
-    "build": "turbo run build",
-    "commit": "sui-mono commit",
-    "postinstall": "pnpm run build"
+		"build": "turbo run build",
+		"commit": "sui-mono commit",
+		"postinstall": "pnpm run build"
 	},
-  "workspaces": ["./cli", "./website"],
+	"workspaces": ["./cli", "./website"],
 	"homepage": "https://node-fs-cli.vercel.app",
 	"author": {
 		"name": "coresyt",

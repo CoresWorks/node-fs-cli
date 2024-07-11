@@ -1,32 +1,16 @@
 #!/usr/bin/env node
 import { Command } from 'commander'
 import chalk from 'chalk'
-import fs from 'fs/promises'
 
-const rootCli = new Command()
-const { green, greenBright, yellow } = chalk
+import addFolCommand from './commands/addfolder.js'
+import addFileCommand from './commands/addfile.js'
+import readdirCommand from './commands/readdir.js'
 
-rootCli.argument('<path>', 'path is reader').action(async (...args) => {
-  const path: string = args[0] ?? process.cwd()
-  const isDir = async (readerPath: string) => await fs.readdir(readerPath)
+const { blue } = chalk
 
-  const files = await isDir(path)
+const addCommand = new Command('add')
+  .addHelpText('beforeAll', blue.bold('FS CLI'))
+  .addCommand(addFolCommand) // AddFolder Command
+  .addCommand(addFileCommand) // AddFile Command
 
-  files.map(async (name, i) => {
-    try {
-      const dir = await isDir(`${path}${name}`)
-      if (dir.length <= 0) throw new Error()
-
-      console.log(`${green(i + 1)} => ${path}${name}/`)
-      dir.map((name2, ii) =>
-        console.log(
-          `  ${greenBright(ii + 1)} => ${yellow(`${path}${name}/${name2}/`)}`
-        )
-      )
-    } catch (_) {
-      console.log(`${chalk.green(i + 1)} => ${path}${name}`)
-    }
-  })
-})
-
-rootCli.parse(process.argv)
+readdirCommand.addCommand(addCommand).parse(process.argv)
