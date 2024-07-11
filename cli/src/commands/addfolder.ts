@@ -1,13 +1,9 @@
 import { Command } from 'commander'
-import chalk from 'chalk'
-
-import folderController from '../controllers/folder.js'
-
-const { blue, green } = chalk
+import { addFolderController } from '../controllers/folder.js'
 
 const addFolCommand = new Command('folder')
-  .option(blue('-p, --path [path]'), green('the path is create'))
-  .option(blue('-f, --folder [folder]'), green('name folder is create'))
-  .action(async (...args) => folderController(args[0]))
+  .option('-p, --path [path]', 'the path is create')
+  .option('-f, --folder [folder]', 'name folder is create')
+  .action(async (...args) => addFolderController(args[0]))
 
 export default addFolCommand

@@ -1,35 +1,41 @@
 {
-	"name": "@fs/cli",
-	"version": "1.0.0",
-	"description": "",
-	"type": "module",
-	"bin": "./dist/index.js",
-	"main": "./dist/index.js",
-	"scripts": {
-		"build": "tsc",
-		"dev": "tsc --watch"
-	},
-	"keywords": ["node", "fs", "cli"],
-	"author": {
-		"name": "coresyt",
-		"email": "coresyt2011@gmail.com",
-		"url": "https://coresyt.vercel.app"
-	},
-	"repository": {
-		"url": "git+https://github.com/CoresWorks/node-fs-cli.git",
-		"type": "git"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"@types/node": "20.14.10",
-		"typescript": "5.5.3"
-	},
-	"dependencies": {
-		"chalk": "5.3.0",
-		"commander": "12.1.0",
-		"ora": "8.0.1"
-	},
-	"engines": {
-		"node": "v20"
-	}
+  "name": "@fs/cli",
+  "version": "0.5.0",
+  "description": "",
+  "type": "module",
+  "bin": "./dist/index.js",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "node",
+    "fs",
+    "cli"
+  ],
+  "author": {
+    "name": "coresyt",
+    "email": "coresyt2011@gmail.com",
+    "url": "https://coresyt.vercel.app"
+  },
+  "repository": {
+    "url": "git+https://github.com/CoresWorks/node-fs-cli.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/prompts": "2.4.9",
+    "typescript": "5.5.3"
+  },
+  "dependencies": {
+    "chalk": "5.3.0",
+    "commander": "12.1.0",
+    "ora": "8.0.1",
+    "prompts": "2.4.2"
+  },
+  "engines": {
+    "node": "v20"
+  }
 }
