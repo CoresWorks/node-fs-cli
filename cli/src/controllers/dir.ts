@@ -8,7 +8,7 @@ export default async function readderDir(...args: string[]): Promise<void> {
     if (!args[0] || args.length <= 0) path = process.cwd()
     else path = args[0]
 
-    console.log(`Is path reader ${green("'path'")}:`)
+    console.log(`Is path reader ${green(`'${path}'`)}:`)
     const isDir = async (readerPath: string) => await fs.readdir(readerPath)
 
     const files = await isDir(path)
