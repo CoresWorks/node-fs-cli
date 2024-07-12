@@ -1,0 +1,19 @@
+name: Formating and Linting
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - run: pnpm install --frozen-lockfile
+        working-directory: .
+      - run: pnpm lintf
+    
