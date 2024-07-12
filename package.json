@@ -1,28 +1,30 @@
 {
-	"name": "fs",
-	"private": true,
-	"scripts": {
-		"lint": "biome lint . && biome format . --write",
-		"lintf": "biome lint . --fix && biome format . --write",
-		"build": "turbo run build",
-		"commit": "sui-mono commit",
-		"postinstall": "pnpm run build"
-	},
-	"workspaces": ["./cli", "./website"],
-	"homepage": "https://node-fs-cli.vercel.app",
-	"author": {
-		"name": "coresyt",
-		"email": "coresyt2011@gmail.com",
-		"url": "https://coresyt.vercel.app"
-	},
-	"repository": {
-		"url": "https://github.com/CoresWorks/node-fs-cli.git",
-		"type": "git"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.8.3",
-		"@s-ui/mono": "2.45.0",
-		"turbo": "2.0.6"
-	},
-	"packageManager": "pnpm@9.4.0"
+  "name": "fs",
+  "private": true,
+  "scripts": {
+    "lint": "biome lint . && biome format . --write",
+    "lintf": "biome lint . --fix && biome format . --write",
+    "build": "turbo run build",
+    "commit": "sui-mono commit"
+  },
+  "workspaces": [
+    "./cli",
+    "./docs"
+  ],
+  "homepage": "https://node-fs-cli.vercel.app",
+  "author": {
+    "name": "coresyt",
+    "email": "coresyt2011@gmail.com",
+    "url": "https://coresyt.vercel.app"
+  },
+  "repository": {
+    "url": "https://github.com/CoresWorks/node-fs-cli.git",
+    "type": "git"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@s-ui/mono": "2.45.0",
+    "turbo": "2.0.6"
+  },
+  "packageManager": "pnpm@9.4.0"
 }
