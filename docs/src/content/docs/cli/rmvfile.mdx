@@ -1,0 +1,42 @@
+---
+title: Remove file
+description: Esta es una guía para como empezar a usar @fs/cli
+sidebar:
+  order: 4
+---
+import { Code } from '@astrojs/starlight/components';
+
+export const HelpCommand = `
+coresyt @fs/cli v0.5.0
+Usage: cli add file [options]
+
+Options:
+  -p, --path [path]  the path is remove
+  -f, --file [file]  name file is remove
+`
+
+export const ShowCases = `
+@fs/cli rmv file -p <dir> -f <file>
+
+# or
+
+@fs/cli rmv file
+
+√ What's is your remove path? » <dir>
+√ What's is you name remove file » <file>
+`
+
+## Casos de uso
+<Code code={ShowCases} lang="bash" title="Terminal" />
+
+## Opciones
+
+### `path` -p, --path
+**type:** `string`
+
+La opción `path` o `dir` es donde se eliminara el archivo
+
+### `file` -f, --file
+**type:** `string`
+
+La opción `file` es el nombre con extension del archivo a eliminar

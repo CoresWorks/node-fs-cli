@@ -1,0 +1,43 @@
+---
+title: Add folder
+description: Esta es una guía para como empezar a usar @fs/cli
+sidebar:
+  order: 3
+---
+import { Code } from '@astrojs/starlight/components';
+
+export const HelpCommand = `
+coresyt @fs/cli v0.5.0
+Usage: cli add folder [options]
+
+Options:
+  -p, --path [path]  the path is create
+  -f, --folder [folder]  name folder is create
+`
+
+export const ShowCases = `
+@fs/cli add folder -p <dir> -f <folder>
+
+# or
+
+@fs/cli add folder
+
+√ What's is your create path? » <dir>
+√ What's is you name create folder? » <folder>
+`
+export const SCSuccess = ['File is create successfully']
+
+## Casos de uso
+<Code code={ShowCases} lang="bash" title="Terminal" ins={SCSuccess} />
+
+## Opciones
+
+### `path` -p, --path
+**type:** `string`
+
+La opción `path` o `dir` es donde se creara la carpeta
+
+### `folder` -f, --folder
+**type:** `string`
+
+La opción `folder` es el nombre de la carpeta 

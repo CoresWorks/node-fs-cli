@@ -1,0 +1,42 @@
+---
+title: Remove folder
+description: Esta es una guía para como empezar a usar @fs/cli
+sidebar:
+  order: 5
+---
+import { Code } from '@astrojs/starlight/components';
+
+export const HelpCommand = `
+coresyt @fs/cli v0.5.0
+Usage: cli add folder [options]
+
+Options:
+  -p, --path [path]  the path is remove
+  -f, --folder [folder]  name folder is remove
+`
+
+export const ShowCases = `
+@fs/cli add rmv -p <dir> -f <folder>
+
+# or
+
+@fs/cli rmv folder
+
+√ What's is your remove path? » <dir>
+√ What's is you name removed folder? » <folder>
+`
+
+## Casos de uso
+<Code code={ShowCases} lang="bash" title="Terminal" />
+
+## Opciones
+
+### `path` -p, --path
+**type:** `string`
+
+La opción `path` o `dir` es donde se eliminara la carpeta
+
+### `folder` -f, --folder
+**type:** `string`
+
+La opción `folder` es el nombre de la carpeta a eliminar

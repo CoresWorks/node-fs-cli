@@ -1,0 +1,52 @@
+---
+title: Primeros pasos
+description: Esta es una guía para como empezar a usar @fs/cli
+sidebar:
+  order: 1
+---
+import { Code, Tabs, TabItem } from '@astrojs/starlight/components';
+
+export const InstallCodeNpm = `
+npm install -g @fs/cli
+`
+export const InstallCodePnpm = `
+pnpm install -g @fs/cli
+`
+export const InstallCodeYarn = `
+yarn install -g @fs/cli
+`
+
+export const ShowCases = `
+> @fs/cli . # or
+Is path reader 'E:\\node-fs-cli\\cli':
+1 -> E:\\node-fs-cli\\cli\\dist
+2 -> E:\\node-fs-cli\\cli\\node_modules
+3 -> E:\\node-fs-cli\\cli\\package.json
+4 -> E:\\node-fs-cli\\cli\\src
+5 -> E:\\node-fs-cli\\cli\\tsconfig.json
+
+> @fs/cli add file
+
+√ What's is your create path? » <dir>
+√ What's is you name assigned file » <file>
+✔ Creating...
+✔ File is create successfully
+`
+export const SCSuccess = ['File is create successfully']
+
+## Instalación
+<Tabs>
+  <TabItem label="Pnpm" icon="pnpm">
+    <Code code={InstallCodePnpm} lang="bash" title="Terminal" />
+  </TabItem>
+  <TabItem label="Yarn" icon="seti:yarn">
+    <Code code={InstallCodeYarn} lang="bash" title="Terminal" />
+  </TabItem>
+  <TabItem label="NPM" icon="seti:npm">
+    <Code code={InstallCodeNpm} lang="bash" title="Terminal" />
+  </TabItem>
+</Tabs>
+
+## Casos de uso
+<Code code={ShowCases} lang="bash" title="Terminal" ins={SCSuccess} />
+

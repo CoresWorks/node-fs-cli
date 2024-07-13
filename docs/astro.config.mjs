@@ -3,23 +3,20 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://coresworks.github.io',
+  base: 'node-fs-cli',
+
   integrations: [
     starlight({
-      title: '@fs/cli',
+      title: 'fs',
+      favicon: '/node.png',
       social: {
         github: 'https://github.com/CoresWorks/node-fs-cli',
       },
       sidebar: [
         {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' },
-          ],
-        },
-        {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          label: 'CLI',
+          autogenerate: { directory: 'cli' },
         },
       ],
     }),
