@@ -3,8 +3,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://coresworks.github.io',
-  base: 'node-fs-cli',
+  site: 'https://node-fs-cli.vercel.app',
+  base: '/',
 
   integrations: [
     starlight({
