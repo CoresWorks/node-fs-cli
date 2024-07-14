@@ -1,5 +1,5 @@
 {
-  "name": "@fs/cli",
+  "name": "@cyt/fs-cli",
   "version": "0.7.0",
   "description": "",
   "type": "module",
@@ -20,7 +20,7 @@
     "url": "https://coresyt.vercel.app"
   },
   "repository": {
-    "url": "git+https://github.com/CoresWorks/node-fs-cli.git",
+    "url": "git+https://github.com/CoresWorks/node-fs-cli",
     "type": "git",
     "directory": "./cli/"
   },
