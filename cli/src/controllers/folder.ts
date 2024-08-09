@@ -12,7 +12,11 @@ export async function addFolderController(args: {
   folder?: string
   path?: string
 }): Promise<void> {
-  const spinner = ora({ text: 'Creating...', color: 'green', spinner: 'balloon' })
+  const spinner = ora({
+    text: 'Creating...',
+    color: 'green',
+    spinner: 'balloon'
+  })
 
   try {
     if (args.folder) {
@@ -53,7 +57,11 @@ export async function rmvFolderController(args: {
   folder?: string
   path?: string
 }): Promise<void> {
-  const spinner = ora({ text: 'Deleting...', color: 'green', spinner: 'balloon' })
+  const spinner = ora({
+    text: 'Deleting...',
+    color: 'green',
+    spinner: 'balloon'
+  })
 
   try {
     if (args.folder) {

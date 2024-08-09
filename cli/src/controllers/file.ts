@@ -12,7 +12,11 @@ export async function addFileController(args: {
   file?: string
   path?: string
 }): Promise<void> {
-  const spinner = ora({ text: 'Creating...', color: 'green', spinner: 'balloon' })
+  const spinner = ora({
+    text: 'Creating...',
+    color: 'green',
+    spinner: 'balloon'
+  })
   try {
     if (args.file) {
       let path: string
@@ -22,7 +26,11 @@ export async function addFileController(args: {
       if (!FILE_REGEXP.test(path))
         return console.log(red('Is file is not valid'))
 
-      const spinner = ora({ text: 'Creating...', color: 'green', spinner: 'balloon' })
+      const spinner = ora({
+        text: 'Creating...',
+        color: 'green',
+        spinner: 'balloon'
+      })
       spinner.start()
 
       return await fs
@@ -62,7 +70,11 @@ export async function rmvFileController(args: {
   file?: string
   path?: string
 }): Promise<void> {
-  const spinner = ora({ text: 'Deleting...', color: 'green', spinner: 'balloon' })
+  const spinner = ora({
+    text: 'Deleting...',
+    color: 'green',
+    spinner: 'balloon'
+  })
   try {
     if (args.file) {
       let path: string
@@ -105,4 +117,3 @@ export async function rmvFileController(args: {
     return
   }
 }
-
